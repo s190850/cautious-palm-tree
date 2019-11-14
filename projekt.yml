@@ -1,0 +1,22 @@
+---
+# Implementation of Projekt "Luftbrücke nach Nord-Korea"
+- name: Implementation of standards
+  hosts: all
+
+  roles:
+    - code-of-conduct
+    - documentation-standards
+
+- name: Implementation of legal framework
+  hosts: legal-companies
+
+  roles:
+    - Landing-Agreements
+    - Trade-Agreements
+
+- name: Implementation of technical and physical requirements
+  hosts: airlines
+
+  roles:
+    - flightplan
+    - technical-adoption
