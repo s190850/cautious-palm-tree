@@ -1,0 +1,13 @@
+---
+- name: Official documentation
+  documentation: only the version on the master branch is valid
+
+- name: Change Documentation
+  document: change documentation to the current planned documentation
+  failed_when:
+    - reason not in COMMIT MSG
+    - multiple independendant changes in commit
+
+- name: Update Documentation from internal tree
+  github: apply change from internal to master
+  when: change approved by management
